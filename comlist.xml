@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<comlist>
+<com company="Microsoft" name="CDONTS" id="CDONTS.NewMail"/>
+<com company="Persit Software Inc." name="ASPUpload" id="Persits.Upload"/>
+<com company="Persit Software Inc." name="ASPEmail" id="Persits.MailSender"/>
+<com company="Persit Software Inc." name="ASPEncrypt" id="Persits.Crypto"/>
+<com company="SoftArtisans, Inc." name="SA-FileUP" id="SoftArtisans.FileUp"/>
+<com company="SoftArtisans, Inc." name="SA-SMTPMail" id="SMTPMail.SMTPMail.1"/>
+<com company="SoftArtisans, Inc." name="SA-Archive" id="SoftArtisans.Archive"/>
+<com company="ServerObjects Inc." name="ASPMail" id="SMTPsvg.Mailer"/>
+<com company="ServerObjects Inc." name="ASPHTTP" id="ASPHTTP.Conn"/>
+<com company="ServerObjects Inc." name="ASPPOP3" id="POP3svg.Mailer"/>
+<com company="ServerObjects Inc." name="ASPImage" id="ASPImage.Image"/>
+<com company="ServerObjects Inc." name="ASPSock" id="ASPSock.Conn"/>
+<com company="ServerObjects Inc." name="ASPDNS" id="ASPDNS.Lookup"/>
+<com company="US Intertech" name="ASP-db Free" id="ASPdb.Free"/>
+<com company="Dimac" name="JMail" id="JMail.SMTPMail"/>
+<com company="Infomentum" name="ActiveFile" id="ActiveFile.Post"/>
+<com company="Microsoft" name="IIS 5+" id="ADODB.Stream"/>
+</comlist>
