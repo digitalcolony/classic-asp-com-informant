@@ -1,15 +1,48 @@
-<!-- 
-
-H2 { color: #ffffff; font : 14px/16px verdana, arial, helvetica, sans-serif;font-weight: bold;  }
-A:link {font-size : 12px;line-height : 15px; font-family : verdana, arial, helvetica, sans-serif; color: #CCCCFF;}
-A:visited {font-size : 12px;line-height : 15px; font-family : verdana, arial, helvetica, sans-serif;  color: #eaeaea; }
-A:active {font-size : 12px;line-height : 15px; font-family : verdana, arial, helvetica, sans-serif;  color: #0000ff;   }
-A:hover {font-size : 12px;line-height : 15px; font-family : verdana, arial, helvetica, sans-serif; color: #FFFFFF;  } 
-
-TD {font : 11px/16px verdana, arial, helvetica, sans-serif; }
-TR.alt {background-color: #cd853f;}
-.yes { color: #006400; } 
-.no {color: #8b0000; } 
-TH {font : 11px/16px verdana, arial, helvetica, sans-serif; color: #000000;font-weight: bold; background-color: #e3e3e3; }
+h2 {
+  color: #ffffff;
+  font: 14px/16px verdana, arial, helvetica, sans-serif;
+  font-weight: bold;
 }
-//-->
+a:link {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: #ccccff;
+}
+a:visited {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: #eaeaea;
+}
+a:active {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: #0000ff;
+}
+a:hover {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: #ffffff;
+}
+
+td {
+  font: 11px/16px verdana, arial, helvetica, sans-serif;
+}
+tr.alt {
+  background-color: #cd853f;
+}
+.yes {
+  color: #006400;
+}
+.no {
+  color: #8b0000;
+}
+th {
+  font: 11px/16px verdana, arial, helvetica, sans-serif;
+  color: #000000;
+  font-weight: bold;
+  background-color: #e3e3e3;
+}

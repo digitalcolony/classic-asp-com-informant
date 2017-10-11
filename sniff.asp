@@ -6,7 +6,6 @@
 	
 	Set FSO = Server.CreateObject("Scripting.FileSystemObject") 
 	
-	
 	action  = Request.Form("action")
 	If action = "ADD" Then
 		Call addCOM()
@@ -99,9 +98,7 @@
 		Else
 			Response.Write "<tr><td colspan=""5"">-- no components on list --</td></tr>"
 		End If
-		
 	End Sub
-	
 	
 	Function testCOM(comName)
 		On error resume next
@@ -115,57 +112,68 @@
 		
 	End Function
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<title>COM Sniffer</title>
-	<META name="description" content="Check for components installed on IIS web server.  Screen allows for user to add to component list.">
-	<META name="keywords" content="component, COM, sniffer, detect, 3rd party, XML">
-	<META name="author" content="mas">
-	<META HTTP-EQUIV="Content-Language" CONTENT="EN">
-	<META NAME="robots" CONTENT="FOLLOW,INDEX">
-	<link rel="STYLESHEET" type="text/css" href="com.css">
-	<script language="JavaScript" type="text/javascript">
-	<!-- 
-		function whackCOM(com){
-			if(confirm("Are you sure you want to delete the "+com+" from list?")){
-				formUpdate.com.value = com;
-				formUpdate.submit();
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	<html>
+
+	<head>
+		<title>COM Sniffer</title>
+		<META name="description" content="Check for components installed on IIS web server.  Screen allows for user to add to component list.">
+		<META name="keywords" content="component, COM, sniffer, detect, 3rd party, XML">
+		<META name="author" content="mas">
+		<META HTTP-EQUIV="Content-Language" CONTENT="EN">
+		<META NAME="robots" CONTENT="FOLLOW,INDEX">
+		<link rel="STYLESHEET" type="text/css" href="com.css">
+		<script language="JavaScript" type="text/javascript">
+			function whackCOM(com) {
+				if (confirm("Are you sure you want to delete the " + com + " from list?")) {
+					formUpdate.com.value = com;
+					formUpdate.submit();
+				}
 			}
-		}
-	// -->
-	</script>
-</head>
+		</script>
+	</head>
 
-<body>
+	<body>
 
-<div align="right"><a href="sniff.asp"><strong>[Refresh]</strong></a></div>
-<h2 align="center">COM Informant - Detect Installed Components</h2>
+		<div align="right"><a href="sniff.asp"><strong>[Refresh]</strong></a></div>
+		<h2 align="center">COM Informant - Detect Installed Components</h2>
 
-<form action="sniff.asp" method="post" name="formAdd" id="formAdd">
-<input type="hidden" name="action" value="ADD">
-<table cellspacing="0" cellpadding="5" align="center" bgcolor="#FFFFFF">
-<tr><th colspan="4">Add Component To List</th></tr>
-<tr>
-	<td>Company: <input type="text" name="company" size="20" maxlength="30"></td>
-	<td>Name: <input type="text" name="name" size="20" maxlength="30"></td>
-	<td>COM: <input type="text" name="id" size="20" maxlength="30"></td>
-	<td><input type="submit" name="add" value="Add" disabled></td>
-</tr>
-</table>
-</form>
-<h2 align="center"><%= Request.Servervariables("SERVER_NAME") %> - <%= Now() %></h2>
-<form action="sniff.asp" method="post" name="formUpdate" id="formUpdate">
-<input type="hidden" name="action" value="UPDATE">
-<input type="hidden" name="com" value="">
-<table cellspacing="0" cellpadding="3" align="center" bgcolor="#FFFFFF">
-<tr><th>Company</th><th>Name</th><th>COM</th><th>Installed?</th><th>Update</th></tr>
-<%  
+		<form action="sniff.asp" method="post" name="formAdd" id="formAdd">
+			<input type="hidden" name="action" value="ADD">
+			<table cellspacing="0" cellpadding="5" align="center" bgcolor="#FFFFFF">
+				<tr>
+					<th colspan="4">Add Component To List</th>
+				</tr>
+				<tr>
+					<td>Company: <input type="text" name="company" size="20" maxlength="30"></td>
+					<td>Name: <input type="text" name="name" size="20" maxlength="30"></td>
+					<td>COM: <input type="text" name="id" size="20" maxlength="30"></td>
+					<td><input type="submit" name="add" value="Add" disabled></td>
+				</tr>
+			</table>
+		</form>
+		<h2 align="center">
+			<%= Request.Servervariables("SERVER_NAME") %> -
+				<%= Now() %>
+		</h2>
+		<form action="sniff.asp" method="post" name="formUpdate" id="formUpdate">
+			<input type="hidden" name="action" value="UPDATE">
+			<input type="hidden" name="com" value="">
+			<table cellspacing="0" cellpadding="3" align="center" bgcolor="#FFFFFF">
+				<tr>
+					<th>Company</th>
+					<th>Name</th>
+					<th>COM</th>
+					<th>Installed?</th>
+					<th>Update</th>
+				</tr>
+				<%  
 	Call getCOMList()
 	Set FSO = nothing
 %>
-</table>
-</form>
-<p>&nbsp;</p>
-</body>
-</html>
+			</table>
+		</form>
+		<p>&nbsp;</p>
+	</body>
+
+	</html>
